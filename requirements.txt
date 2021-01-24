@@ -1,0 +1,4 @@
+pyrogram==1.0.1
+feedparser
+apscheduler
+pickledb
