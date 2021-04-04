@@ -11,6 +11,7 @@ A bot to post messages to Telegram Groups or Channels from rss feed.
 - `BOT_TOKEN` - Get it by creating a Telegram bot on [BotFather](https://t.me/BotFather)
 - `FEED_URL` - URL of RSS Feed
 - `LOG_CHANNEL` - ID of the Telegram Channel where messages are to be posted.
+- `DATABASE_URL` - Here is a full [guide](https://github.com/SpEcHiDe/NoPMsBot/wiki/How-to-Install-Database-%3F). For Heroku, just add the `Heroku Postgres` add-on.
 - `INTERVAL` - Checking Interval in seconds. (optional)
 - `MAX_INSTANCES` - Max instances to be used while checking rss feed. (optional)
 

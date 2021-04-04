@@ -1,4 +1,5 @@
 pyrogram==1.0.1
 feedparser
 apscheduler
-pickledb
+psycopg2-binary
+sqlalchemy==1.3.23
