@@ -23,20 +23,20 @@ if os.environ.get("ENV"):   # Add a ENV in Environment Variables if you wanna co
   check_interval = int(os.environ.get("INTERVAL", 5))
   max_instances = int(os.environ.get("MAX_INSTANCES", 5))
 
-if db.get_link("feed_url") == None:
-  db.update_link("feed_url", "*")
+if db.get_link(feed_url) == None:
+  db.update_link(feed_url, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 def check_feed():
     FEED = feedparser.parse(feed_url)
     entry = FEED.entries[0]
-    if entry.id != db.get_link("feed_url"):
+    if entry.id != db.get_link(feed_url).link:
                    # ↓ Edit this message as your needs.
       message = f"**{entry.title}**\n```{entry.link}```"
       try:
         app.send_message(log_channel, message)
-        db.update_link("feed_url", entry.id)
+        db.update_link(feed_url, entry.id)
       except FloodWait as e:
         print(f"FloodWait: {e.x} seconds")
         sleep(e.x)
