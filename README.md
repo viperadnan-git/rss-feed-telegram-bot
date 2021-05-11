@@ -3,14 +3,14 @@ A bot to post messages to Telegram Groups or Channels from rss feed.
 
 ### Configuration
 - Edit the [rss.py](./rss.py) as your needs.
-- Edit values in [rss.py](./rss.py) or set it in Environment Variables. If you are using Environment Variables, Add a `ENV` var to anything to enable Environment Variables Mode.
+- Edit values in [config.env](./config.env.template) or set it in Environment Variables. There is an template for `config.env` already exists just edit it and rename the file.
 
 ### Configuration Values
 - `APP_ID` - Get it from [my.telegram.org](https://my.telegram.org/apps)
 - `API_HASH` - Get it from [my.telegram.org](https://my.telegram.org/apps)
 - `BOT_TOKEN` - Get it by creating a Telegram bot on [BotFather](https://t.me/BotFather)
-- `FEED_URL` - URL of RSS Feed
-- `LOG_CHANNEL` - ID of the Telegram Channel where messages are to be posted.
+- `FEED_URLS` - List of URLs of RSS Feed, sperated by `|` vertical bar.
+- `LOG_CHAT` - ID of the Telegram Chat where messages are to be posted.
 - `DATABASE_URL` - Here is a full [guide](https://github.com/SpEcHiDe/NoPMsBot/wiki/How-to-Install-Database-%3F). For Heroku, just add the `Heroku Postgres` add-on.
 - `INTERVAL` - Checking Interval in seconds. (optional)
 - `MAX_INSTANCES` - Max instances to be used while checking rss feed. (optional)
