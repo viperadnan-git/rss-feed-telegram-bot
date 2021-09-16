@@ -1,7 +1,11 @@
 import os
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, scoped_session
+
+if os.path.exists("config.env"):
+    load_dotenv("config.env")
 
 DATABASE_URL = os.environ.get("DATABASE_URL")
 

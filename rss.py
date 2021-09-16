@@ -3,14 +3,9 @@ import sys
 import feedparser
 from sql import db
 from time import sleep, time
-from dotenv import load_dotenv
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 from apscheduler.schedulers.background import BackgroundScheduler
-
-
-if os.path.exists("config.env"):
-    load_dotenv("config.env")
 
 
 try:
