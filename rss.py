@@ -45,7 +45,7 @@ def create_feed_checker(feed_url):
             try:
                 app.send_message(log_channel, message)
                 if app2 is not None:
-                    mirr_msg = f"{mirror_cmd} {entry.link}"
+                    mirr_msg = f"{mirr_cmd} {entry.link}"
                     app2.send_message(mirr_chat, mirr_msg)
                 db.update_link(feed_url, entry.id)
             except FloodWait as e:
