@@ -33,7 +33,7 @@
             "value": "",
             "required": true
         },
-        "FEED_URL": {
+        "FEED_URLS": {
             "description": "List of URLs of RSS Feed, separated by | vertical bar",
             "value": "",
             "required": true
