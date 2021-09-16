@@ -1,7 +1,7 @@
 # RSS Feed Telegram Bot
 A bot to post messages to Telegram Groups or Channels from rss feed.
 
-### Configuration
+## Configuration
 - Edit the [rss.py](./rss.py) as your needs.
 - Edit values in [config.env](./config.env.template) or set it in Environment Variables. There is an template for `config.env` already exists just edit it and rename the file.
 
@@ -15,7 +15,13 @@ A bot to post messages to Telegram Groups or Channels from rss feed.
 - `INTERVAL` - Checking Interval in seconds. (optional)
 - `MAX_INSTANCES` - Max instances to be used while checking rss feed. (optional)
 
-### Deployment
+## Deployment
+
+### Deploying on Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+### VPS or any other server/pc
+
 - Install requirements from [requirements.txt](./requirements.txt)
 ```
 pip3 install requirements.txt

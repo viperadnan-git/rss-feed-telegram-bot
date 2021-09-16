@@ -1,0 +1,67 @@
+{
+    "name": "RSS FEED BOT",
+    "description": "A bot to post messages to Telegram Groups or Channels from rss feed.",
+    "keywords": [
+        "telegram",
+        "RSS Feed",
+        "Bot"
+    ],
+    "repository": "https://github.com/viperadnan-git/rss-feed-telegram-bot",
+    "success_url": "https://github.com/magneto261290/rss-feed-telegram-bot",
+    "env": {
+        "ENV": {
+            "description": "idk",
+            "value": "ANYTHING"
+        },
+        "BOT_TOKEN": {
+            "description": "Get it by creating a Telegram bot on BotFather",
+            "value": "",
+            "required": true
+        },
+        "API_ID": {
+            "description": "Get it from my.telegram.org",
+            "value": "",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Get it from my.telegram.org",
+            "value": "",
+            "required": true
+        },
+        "LOG_CHANNEL": {
+            "description": "Telegram Channel/group/user ID where the bot have to send RSS Feeds",
+            "value": "",
+            "required": true
+        },
+        "FEED_URL": {
+            "description": "List of URLs of RSS Feed, separated by | vertical bar",
+            "value": "",
+            "required": true
+        },
+        "INTERVAL": {
+            "description": "Checking Interval in seconds.",
+            "value": "10"
+        },
+        "MAX_INSTANCES": {
+            "description": "Max instances to be used while checking RSS feed.",
+            "value": "3"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "addons": [
+        {
+            "plan": "heroku-postgresql"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "heroku-20"
+}
