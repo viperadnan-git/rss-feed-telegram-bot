@@ -1,5 +1,8 @@
 # RSS Feed Telegram Bot
 A bot to post messages to Telegram Groups or Channels from rss feed.
+- This bot can also send /mirror commands to your mirror bot using your telegram account.
+bcoz bot can't read another bot's mag. So this bot will use your TG account to interact with mirror bot.
+Fill `STR_SESSION` and `MIRROR_CHAT_ID` vars to enable it.
 
 ## Configuration
 - Edit the [rss.py](./rss.py) as your needs.
@@ -14,6 +17,16 @@ A bot to post messages to Telegram Groups or Channels from rss feed.
 - `DATABASE_URL` - Here is a full [guide](https://github.com/SpEcHiDe/NoPMsBot/wiki/How-to-Install-Database-%3F). For Heroku, just add the `Heroku Postgres` add-on.
 - `INTERVAL` - Checking Interval in seconds. (optional)
 - `MAX_INSTANCES` - Max instances to be used while checking rss feed. (optional)
+### Working as a userbot on your behalf to interact with mirror bot.
+
+These variabls are required only if you want to use your tg account to send /mirror cmd to any mirror bot.
+- `MIRROR_CHAT_ID` - Group/chat_id of mirror chat or mirror bot to send mirror cmd.
+- `MIRROR_CMD` - if you have changed default cmd of mirror bot, replace this.
+- `STR_SESSION` - String session generate using your tg mobile number for sending mirror cmd on your behalf. Generate by running
+```
+python gen_str.py 
+```
+(heroku users run in heroku console)
 
 ## Deployment
 
@@ -24,7 +37,7 @@ A bot to post messages to Telegram Groups or Channels from rss feed.
 
 - Install requirements from [requirements.txt](./requirements.txt)
 ```
-pip3 install requirements.txt
+pip3 install -r requirements.txt
 ```
 - Deploy
 ```

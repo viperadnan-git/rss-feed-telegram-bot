@@ -45,6 +45,18 @@
         "MAX_INSTANCES": {
             "description": "Max instances to be used while checking RSS feed.",
             "value": "3"
+        },
+        "STR_SESSION": {
+            "description": "String session generate using your tg mobile number for sending mirror cmd on your behalf.Required only if you are using string session to interact with mirror bot. Generate by running python gen_str.py in heroku console",
+            "value": ""
+        },
+        "MIRROR_CHAT_ID": {
+            "description": "Group/chat_id of mirror chat or mirror bot to send mirror cmd. Required only if you are using string session to interact with mirror bot.",
+            "value": ""
+        },
+        "MIRROR_CMD": {
+            "description": "if you have changed default cmd of mirror bot, replace this. Required only if you are using string session to interact with mirror bot.",
+            "value": "/mirror"
         }
     },
     "buildpacks": [
