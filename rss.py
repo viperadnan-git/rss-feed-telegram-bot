@@ -38,6 +38,8 @@ if str_session is not None and str_session != "":
 def create_feed_checker(feed_url):
     def check_feed():
         FEED = feedparser.parse(feed_url)
+        if len(FEED.entries) == 0:
+            return
         entry = FEED.entries[0]
         if entry.id != db.get_link(feed_url).link:
                        # ↓ Edit this message as your needs.
