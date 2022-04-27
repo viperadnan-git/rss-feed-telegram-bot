@@ -59,5 +59,6 @@ scheduler = BackgroundScheduler()
 for feed_url in feed_urls:
     feed_checker = create_feed_checker(feed_url)
     scheduler.add_job(feed_checker, "interval", seconds=check_interval, max_instances=max_instances)
+    sleep(1)
 scheduler.start()
 app.run()
